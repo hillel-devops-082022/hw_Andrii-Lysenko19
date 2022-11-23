@@ -1,0 +1,11 @@
+hw_15
+- Configuration of git client
+- Basic actions with git
+- Added "Info about Lviv"
+- Actions rolled back
+- Gitignore implementation
+- Dual state of file case
+- Work with branches
+- Origin initialization and push process
+- PR to master branch
+- README.md
