@@ -1,12 +1,6 @@
-FROM node:6-alpine
+FROM node:lts as build
+COPY . .
+RUN npm install && npm start
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-COPY package.json /usr/src/app/
-RUN npm install && npm cache clean
-COPY . /usr/src/app
-
-EXPOSE 8080
-
-CMD [ "npm", "start" ]
+FROM nginx:latest
+COPY --from=build ./build /usr/share/nginx/html
