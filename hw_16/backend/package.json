@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./node_modules/.bin/nodemon --ignore test/ ",
     "test": "./node_modules/.bin/standard && ./node_modules/.bin/lab"
-  },
+ },
   "keywords": [
     "realworl",
     "hapijs",

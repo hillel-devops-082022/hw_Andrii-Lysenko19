@@ -1,6 +1,15 @@
 version: "3"
 
 services:
+  mongo:
+    image: mongo:2.2
+    expose:
+      - 27017
+    restart: on-failure
+    volumes:
+      - data:/data/db
+    networks:
+      - private
   frontend:
     build: ./frontend
     image: andriilysenko19/hillel-frontend:0.0.2
@@ -30,15 +39,6 @@ services:
     restart: on-failure
     networks:
       - public
-      - private
-  mongo:
-    image: mongo:2.2
-    expose:
-      - 27017
-    restart: on-failure
-    volumes:
-      - data:/data/db
-    networks:
       - private
 volumes:
   data:
