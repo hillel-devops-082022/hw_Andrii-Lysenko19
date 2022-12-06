@@ -16,3 +16,8 @@ hw_16
 - Work with Hub.docker
 - Docker-compose build in the new branch hw_16_docker-compose
 - Additional container for MongoDB
+
+hw_17
+- New Branch hw_17_docker-swarm created
+- Edited docker-compose.yml
+- Added docker-compose.stack.yml for docker swarm
