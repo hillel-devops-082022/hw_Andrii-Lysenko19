@@ -12,13 +12,11 @@ services:
       - private
   frontend:
     build: ./frontend
-    image: andriilysenko19/hillel-frontend:0.0.2
+    image: andriilysenko19/hillel-frontend:0.0.1
     ports:
-      - "8080:4100"
+      - "8080:80"
     networks:
       - public
-    environment:
-      - REACT_APP_BACKEND_URL=http://localhost:8081/api
   backend:
     build: ./backend
     image: andriilysenko19/hillel-backend:0.0.1
@@ -40,6 +38,7 @@ services:
     networks:
       - public
       - private
+
 volumes:
   data:
 networks:
